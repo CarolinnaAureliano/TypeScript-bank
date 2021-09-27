@@ -1,0 +1,31 @@
+<%- include('./header'); %>
+
+    <main class="container-fluid">
+        <div class="row">
+            <div class="card text-center">
+                <div class="col-mb-10">
+                    <div class="card-body">
+                        <h4 class="text-center">Fazer transferencia</h4>
+                        <p>Preecha todos os campos com atenção</p>
+                        <form action="/transferir/<%= id %>" method="POST" class="form_cadastro form-group">
+                            <label>Saldo disponivel:</label>
+                            <input type="text" placeholder="Seu saldo:" name="cliente_saldo" id="cliente_saldo"
+                                class="input_form" value="<%= cliente_saldo %>" disabled>
+                            <hr>
+                            <label>Agência</label> <br>
+                            <input type="number" name="agencia" id="agencia" placeholder="001">
+                            <hr>
+                            <label>Conta</label> <br>
+                            <input type="number" name="conta" id="conta" placeholder="123456">
+                            <hr>
+                            <label>Valor da transferencia</label> <br>
+                            <input type="number" name="valor" id="valor" placeholder="199,00">
+                        </form>
+                        <button type="submit" class="botao_form btn btn-warning">Transferir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <%- include('./footer'); %>

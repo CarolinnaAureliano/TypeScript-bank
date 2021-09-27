@@ -1,0 +1,43 @@
+<%- include('./header'); %>
+
+    <main class="container-fluid">
+        <div class="row">
+            <div class="card text-center">
+                <div class="col-md-11">
+                    <div class="card-body">
+                        <h3 class="darker_color">Ainda não é cliente? Cadastre-se!</h3>
+                        <p>Preencha as informações rapidamente para ter acesso a sua conta no melhor banco online:</p>
+                        <form action="/cadastro" method="post" class="form-group">
+                            <label class="sr-only">Nome</label>
+                            <input type="text" id="name" name="name" placeholder="Nome" class="form-control" id="nome"
+                                aria-describedby="namelHelp" required>
+                            
+                            <label class="sr-only" >Email</label>
+                            <input type="email" id="email" name="email" placeholder="Email" class="form-control"
+                                id="email" aria-describedby="emailHelp" required>
+                            
+                            <label class="sr-only" >Senha</label>
+                            <input input type="password" id="password" name="password" placeholder="Senha"
+                                class="form-control" id="senha" required>
+                            
+                            <label class="sr-only" >CPF</label>
+                            <input input type="text" id="cpf" name="cpf" placeholder="CPF" class="form-control" id="cpf"
+                                required>
+                        
+                            <!-- <label class="sr-only">Agencia</label>
+                                <input input type="number" id="agencia" name="agencia" placeholder="Agência" class="form-control" id="agencia" required>
+                            <label class="sr-only">Conta</label>
+                                <input input type="number" id="conta" name="conta" placeholder="Conta" class="form-control" id="conta" required>  -->
+                        <!-- <input type="number" id="saldo" name="saldo" hidden value="1000000">-->
+                        <button type="submit" class="botao_submit btn btn-warning">Cadastrar</button>
+                        </form>
+                        <p class="link">
+                            <a href="/login" class="link">Já possui uma conta? Login.</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <%- include('./footer'); %>
